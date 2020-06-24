@@ -202,7 +202,7 @@ def update(days=0):
   os.chdir(repo_directory)
   local = subprocess.check_output('git rev-parse master'.split()).strip()
   remote = subprocess.check_output(
-    'git ls-remote https://github.com/tldr-pages/tldr/ HEAD'.split()
+    'git ls-remote https://github.com/tldr-pages/tldr HEAD'.split()
   ).split()[0]
 
   if local != remote:
